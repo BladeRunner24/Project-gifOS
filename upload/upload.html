@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+    <link href= ".././styles/recorder.css" rel= "stylesheet" type= "text/css" id = "pagestyle"/>
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.6/RecordRTC.js" type="text/javascript"></script>
+    <script src="https://www.Webrtc-experiment.com/gif-recorder.js" type="text/javascript"></script>
+    <script src="https://www.Webrtc-experiment.com/common.js" type="text/javascript"></script>
+</head>
+<body>
+    <header>
+        <h1>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</h1>
+    </header>
+    <main>
+        <section class = "logos">
+            <div>
+                <img src = ".././images/logo.png" alt = "logo" class= "img1">
+                <img src = ".././images/arrow.svg" alt = "logo" class= "img2">
+            </div>
+        </section>
+        <section class = "crearguifos" id = "crearguifos">
+            <div>
+                <div class= "titulo">
+                    <h2>Crear Guifos</h2>
+                </div>
+                <div class= "paso1" >
+                    <img src = ".././images/window.png" alt = "pantalla">
+                    <h2>Aquí podrás crear tus propios guifos</h2>
+                    <p>Crear tu <i>guifo</i> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los pasos para crear tu guifo son:</p>
+                    <p><b>1)</b> Dar permisos de acceso a la cámara (sólo por el tiempo de uso)</p>
+                    <p><b>2)</b> Capturar tu momento guifo)</p>
+                    <p><b>3)</b> Revisar el momento)</p>
+                    <p><b>4)</b> Listo para subir y compartir!)</p>
+                    <p>¿Quieres comenzar a crear tu <i>guifo</i> ahora?</p>
+                    <a href= ".././index.html">Cancelar</a>
+                    <button id= "comienzo">Comenzar</button>
+                </div>
+            </div>
+        </section>
+        <section class= "capturavideo" id= "capturavideo">
+            <div class="captura">
+                <div class = "titulo1"> 
+                    <h2 id= "titulo">Un Chequeo Antes de Empezar</h2> 
+                    <button><div><img src= "./../images/button3.svg" alt= "boton3"></div></button>                  
+                </div>
+                <div class= "video">
+                    <video id= "videodisplay"></video>
+                    <img class = "imagengif" id = "imagengif" src = "" alt = "gif">
+                    <div class = "pantalladecarga" id= "pantalladecarga">
+                        <img src = ".././images/globe_img.png">
+                        <p class = "titulointerno">Estamos subiendo tu guifo…</p>
+                        <div class = "barraDeCarga1" id= "barraDeCarga" >
+                            <div class = "rosa1"></div>
+                            <div class = "rosa1"></div>
+                            <div class = "rosa1"></div>
+                            <div class = "rosa1"></div>
+                            <div class = "gris1"></div>
+                            <div class = "gris1"></div>
+                            <div class = "gris1"></div>
+                            <div class = "gris1"></div>
+                            <div class = "gris1"></div>
+                            <div class = "gris1"></div>
+                            <div class = "gris1"></div>
+                            <div class = "gris1"></div>
+                            <div class = "gris1"></div>
+                            <div class = "gris1"></div>
+                            <div class = "gris1"></div>
+                            <div class = "gris1"></div>
+                            <div class = "gris1"></div>
+                        </div>
+                        <p class = "textointerno">Tiempo restante: <del>38 años</del> algunos minutos</p>
+                    </div>
+                    <div class= "botonesvideo" id = "botonesvideo">                        
+                        <img src= ".././images/camera.svg" alt="camara">
+                        <button  id='botoncaptura'>Capturar</button>
+                    </div>
+                    <div class= "botonlisto" id= "botonlisto">
+                        <img src= ".././images/recording.svg" alt="recording">
+                        <button class= "listo" id='botonfinalizar'>Listo</button> 
+                    </div>
+                    <div class = "preview" id = "preview">
+                        <div class= "timer1" id= "timer1">
+                            <button>00:00:03:06</button>
+                        </div>
+                        <div class = "carga">
+                        <img src= ".././images/forward.svg" alt = "forward" id = "forward">
+                        <div class = "barraDeCarga" id= "barraDeCarga" >
+                            <div class = "rosa"></div>
+                            <div class = "rosa"></div>
+                            <div class = "rosa"></div>
+                            <div class = "rosa"></div>
+                            <div class = "gris"></div>
+                            <div class = "gris"></div>
+                            <div class = "gris"></div>
+                            <div class = "gris"></div>
+                            <div class = "gris"></div>
+                            <div class = "gris"></div>
+                            <div class = "gris"></div>
+                            <div class = "gris"></div>
+                            <div class = "gris"></div>
+                            <div class = "gris"></div>
+                            <div class = "gris"></div>
+                            <div class = "gris"></div>
+                            <div class = "gris"></div>
+                        </div>
+                      </div>
+                      <div class= "botonespreview">
+                            <button class= "repetir" id = "repetir">Repetir Captura</button>
+                            <button class= "subir" id = "subir">Subir Guifo</button>
+                        </div>
+                    </div>
+                    <div class= "timer" id= "timer">
+                        <p>00:00:03:06</p>
+                    </div>
+                    <div class= "cancelar" id= "cancelar">
+                        <button id= "cancelar">Cancelar</button>
+                    </div>                    
+            </div>
+        </section>
+        <section class= "ultimapantalla" id= "ultimapantalla">
+            <div class= "pantallafinal">
+                <div class= "titulofinal">
+                    <h2>Guifo Subido Con Éxito</h2>
+                    <button><img src= "./../images/button3.svg" alt= "boton3"></button>
+                </div>
+                <div class= "pf">
+                    <img src="" alt = "guifo" id = "segundaimagengif">
+                    <p>Guifo creado con éxito</p>
+                    <div class= "botonespf">
+                        <button id = "textoenlace">Copiar Enlace Guifo</button>
+                        <a href = "" id = "copiaenlace" download>Descargar Guifo</a>
+                    </div>
+                    <button class = "listo" id = "listo" type= "button">Listo</button> 
+                    <input type="text" value="" id="myInput">                   
+                </div>
+            </div>
+        </section>
+        <section class= "misguifos" id= "misguifos">
+            <div class = "titulomg">
+              <h2>Mis guifos</h2>
+            </div>
+            <div class = "galeriaguif" id = "galeriaguifs">                  
+            </div>
+        </section>       
+    </main>
+    <script src= ".././script/recorder.js"></script>    
+</body>
+</html>
